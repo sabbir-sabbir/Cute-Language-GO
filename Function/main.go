@@ -6,24 +6,17 @@ import (
 
 ) 
 
-//  func simpleFunction() {
-// 	fmt.Println("This is a simple function")
-//  }
+func simpleFunc (){
+	fmt.Println("its a simple func")
+}
 
-// func add(a, b int) (int) {
-// 	return a + b
-// }
-
- func multiply(a, b int) (result int) {
- 	result = a * b
-	return
- }
+func add(a, b int) (int) {
+	return a + b
+}
 
 func main() {
-	// fmt.Println("Hello, World!")
-	// simpleFunction()
-	// ans := add(5, 10)
-	// fmt.Println("add of two numbers:", ans)
-	ans := multiply(5, 10)
-	fmt.Println("multiply of two numbers:", ans)
-}
+	fmt.Println("Hello world!")
+	simpleFunc()
+	add := add(1, 2)
+	fmt.Println("This wll add two numbers: ", add)
+} 
