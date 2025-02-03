@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Println("Hey! What's your name?")
-	
+	fmt.Println("Whats your name? ...................")
+
+
 	reader := bufio.NewReader(os.Stdin)
 	name, _ := reader.ReadString('\n')
-	fmt.Printf("Hello, %s", name)
+	fmt.Println("Hello, Mr,", name)
 }
