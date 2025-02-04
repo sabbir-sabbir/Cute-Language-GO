@@ -1,2 +1,5 @@
-Hello from Go!
+Hello from Go! 
+Welcome to Go 
+Welcome to Learning path
+
 

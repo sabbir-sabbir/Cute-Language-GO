@@ -1,20 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func main() {
-
-	currentTime := time.Now()
-	// formattedTime := currentTime.Format("02-01-2006,  Monday, 3:04 PM" )
-	// fmt.Println(formattedTime)
-
-
-	newDate := currentTime.Add(48 * time.Hour)
-	// fmt.Println(newDate)
-	formattedNewDate := newDate.Format("02-01-2006,  Monday, 3:04 PM" )
-	fmt.Println(formattedNewDate)
-
+    currentTime := time.Now()
+    formatteddTime := currentTime.Format("2006-01-02, Wednesday")
+    fmt.Println(formatteddTime)
+	fmt.Println("Welcome to 2025")
 }
