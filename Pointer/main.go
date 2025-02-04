@@ -9,4 +9,5 @@ func main() {
 
 	fmt.Println("Value of num: ", num)
 	fmt.Println("Value of num: ", ptr)
+	fmt.Println(*ptr)
 }
