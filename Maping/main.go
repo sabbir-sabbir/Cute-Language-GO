@@ -3,27 +3,28 @@ package main
 import "fmt"
 
 func main() {
+    // myData := make(map[string]int)
+	// myData["John"] = 30
+	// myData["Jane"] = 25
+	// myData["Bob"] = 35
+	// myData["Alice"] = 28
+	// myData["Tom"] = 40
+	// fmt.Println("Marks of Alice:", myData["Alice"])
 
-	// grades of studens
-	studensGrades := make(map[string]int)  
+	// grades, exists := myData["sabbir"]
+	// fmt.Println(grades,exists)
 
-	// adding grades of studens
-	studensGrades["Sabbir"] = 100
-	studensGrades["Rahim"] = 90
-	studensGrades["Karim"] = 80
-	studensGrades["Jabir"] = 70
-	studensGrades["Kabir"] = 60
-     
-	// print grades of studens
-	// fmt.Println("Grades of Sabbir:", studensGrades["Sabbir"])
-	// studensGrades["Sabbir"] = 700
-	// fmt.Println(" new Grades of Sabbir:", studensGrades["Sabbir"])
+	person := map[string]int{
+		"John":   30,
+        "Jane":   25,
+        "Bob":    35,
+        "Alice":   28,
+        "Tom":    40,
+
+	}
 	
-	//  value, exits :=   studensGrades["Sabbir"]
-	//  fmt.Println("Grades of Sabbir:", value, "Exits:", exits)
-
-	for index, value := range studensGrades{
-		fmt.Println("Index:", index, "Value:", value)
+	for index, val := range person {
+		fmt.Printf("Index: %s\n Value: %d\n", index, val)
 	}
 
 }
