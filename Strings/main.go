@@ -6,14 +6,11 @@ import (
 )
 
 func main() {
-	// str := "one two three four five five "
+	data := "apple,banana,orange"
+	parts := strings.Split(data, ".")
+	fmt.Println(parts)
 
-	// count :=  strings.Count(str, "five")
-	// fmt.Println("count", count)
-
-	str1 := "sabbir"
-	str2 := "rahman"
-	result := strings.Join([]string{str1, str2}, " + ")
-
-	fmt.Println(result)
+	ran_str := "Hello Hello This Is The Go Language Can You Have Your Friends With Your"
+	count := strings.Count(ran_str, "Hello")
+	fmt.Println(count)
 }
