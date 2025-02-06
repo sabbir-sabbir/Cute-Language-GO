@@ -18,7 +18,7 @@ func main() {
     fmt.Println("Error in marshalling" , err)
     return
    }
-//    fmt.Println(string(jsonData))
+   fmt.Println(string(jsonData))
 
     var person Person 
     err = json.Unmarshal(jsonData, &person)
