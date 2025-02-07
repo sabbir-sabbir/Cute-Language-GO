@@ -51,10 +51,10 @@ func ForPostReq() {
         fmt.Println("Error marshalling", err)
         return
     }
-
+      url := "https://jsonplaceholder.typicode.com/users"
 	jsonString := string(jsonData)
 	jsonReader := strings.NewReader(jsonString)
-    url := "https://jsonplaceholder.typicode.com/users"
+  
 	res, err := http.Post(url, "application/json", jsonReader)
 	if err!= nil {
         fmt.Println("Error posting", err)
@@ -66,11 +66,66 @@ func ForPostReq() {
 	fmt.Println(string(data))
 }
 
+func ForUpdateRq() {
+	user := Users{
+		ID:        10,
+        Name:      "John Doe Updated",
+        Username: "johndoe Updated",
+        Email:     "johndoe@example.com Updated",
+	}
+	jsonData, err := json.Marshal(user)
+	if err!= nil {
+        fmt.Println("Error marshalling", err)
+        return
+    }
+	jsonString := string(jsonData)
+    jsonReader   := strings.NewReader(jsonString)
+   myUrl := "https://jsonplaceholder.typicode.com/users/10"
+
+   req, err := http.NewRequest(http.MethodPut, myUrl, jsonReader)
+   if err!= nil {
+        fmt.Println("Error creating request", err)
+        return
+    }
+
+	req.Header.Set("Content-Type", "application/json")
+	client := http.Client{}
+	res, err := client.Do(req)
+	if err!= nil {
+        fmt.Println("Error posting", err)
+        return
+    }
+	defer res.Body.Close()
+
+	data, _ := io.ReadAll(res.Body)
+	fmt.Println(string(data))
+}
+
+ func ForDeleteReq() {
+	myUrl := "https://jsonplaceholder.typicode.com/users/10"
+	req, err := http.NewRequest(http.MethodDelete, myUrl, nil)
+	if err!= nil {
+        fmt.Println("Error creating request", err)
+        return
+    }
+
+	client := http.Client{}
+	res, err := client.Do(req)
+	if err!= nil {
+        fmt.Println("Error posting", err)
+        return
+    }
+	defer res.Body.Close()
+
+	fmt.Println(res.StatusCode)
+
+ }
 
 
 // This is the main function
 func main() {
 	// ForGetReq()
-	ForPostReq()
-	
+	// ForPostReq()
+	// ForUpdateRq()
+	ForDeleteReq()
 }
