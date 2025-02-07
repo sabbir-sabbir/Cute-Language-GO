@@ -7,22 +7,20 @@ import (
 
 
 
-
-
 func sayHello() {
-	fmt.Println("Hello")
+	fmt.Println("HELLO- WORLD!")
 	time.Sleep(2000 * time.Millisecond)
-	fmt.Println("Say hello func ended successfully")
+	fmt.Println("ok after 2 second")
 }
-func sayHi() {
-	fmt.Println("HI")
+func hi() {
+	fmt.Println("HI HI HI")
 }
 
 func main() {
-	fmt.Println("Learning Goroutine")
-	sayHello()
-	sayHi()
+	fmt.Println("Learning... goroutine now ")
+	go sayHello()
+	hi()
+	
 
-	// waiting for first func execute
 	time.Sleep(3000 * time.Millisecond)
 }
